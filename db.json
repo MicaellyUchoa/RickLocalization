@@ -1,0 +1,26 @@
+{
+  "personage": 
+  [
+    {
+      "id": "",
+      "rickImage": "",
+      "mortyImage": "",
+      "dimensionsId": ""
+  }
+  ],
+  "historic": [
+    {
+      "id": "",
+      "idRickAndMorty": "",
+      "to": "",
+      "from": ""
+  }
+  ],
+  "dimensions": [
+    {
+      "id": "",
+      "name": "",
+      "description": ""
+      }
+  ]
+}
