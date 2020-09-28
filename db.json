@@ -16,11 +16,5 @@
       "from": ""
   }
   ],
-  "dimensions": [
-    {
-      "id": "",
-      "name": "",
-      "description": ""
-      }
-  ]
+  "dimensions": "/server/dimensions.json"
 }
