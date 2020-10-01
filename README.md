@@ -1,12 +1,6 @@
 # RickLocalization
 
-The system keeps Rick and Morty's records in all dimensions, with a history of their travels between dimensions.
-
-##  Install json-server
-Run `npm install -g json-server` to raise the server.
-
-## Run json-server
-Run `json-server --watch db.json` to raise the server.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
 ## Development server
 

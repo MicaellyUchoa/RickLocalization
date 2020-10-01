@@ -1,0 +1,29 @@
+<div id="page-personage-list" class="container">
+    <main>
+        <article class="personage-item" *ngFor="let personage of personageList">
+            <div class="container-personage">
+                <div>
+                    <img src="../assets/rick/{{ personage.rickImage }}" alt="{{ personage.rickName }}" />
+                    <div>
+                        <p>{{ personage.rickName }}</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../assets/morty/{{ personage.mortyImage }}" alt="{{ personage.mortyName }}" />
+                    <div>
+                        <p>{{ personage.mortyName }}</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>
+                    Dimensão
+                    <strong *ngFor="let dimensions of dimensionsList">
+                        <span *ngIf="dimensions.id === personage.dimensionsId">{{ dimensions.name }}</span>
+                    </strong>
+                </p>
+                <button type="button" (click)="openDetails(personage.id)" >Ver detalhes</button>
+            </footer>
+        </article>
+    </main>
+</div>
