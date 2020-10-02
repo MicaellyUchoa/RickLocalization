@@ -6,10 +6,10 @@
         <form class="content" *ngIf="!status" [formGroup]="tripForm" (ngSubmit)="sendHistoric()">
             <p class="title">Adicionar uma aventura</p>
             <div>
-                <label>De:</label>
+                <label class="w-full">ORIGEM</label>
                 <select formControlName="from">
                     <option selected value="">Selecione</option>
-                    <!-- <option *ngFor="let card of cards" [ngValue]="card">Cartão com final {{ card.final }}</option> -->
+                    <option *ngFor="let dimension of dimensionsList" [ngValue]="dimension">{{ dimension.name }}</option>
                 </select>
 
                 <div class="error-container" *ngFor="let validation of validationMessages.from">
@@ -23,11 +23,11 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <label>Para:</label>
+            <div class="w-full">
+                <label class="w-full">DESTINO</label>
                 <select formControlName="to">
                     <option selected value="">Selecione</option>
-                    <!-- <option *ngFor="let card of cards" [ngValue]="card">Cartão com final {{ card.final }}</option> -->
+                    <option *ngFor="let dimension of dimensionsList" [ngValue]="dimension">{{ dimension.name }}</option>
                 </select>
 
                 <div class="error-container" *ngFor="let validation of validationMessages.to">
@@ -50,7 +50,7 @@
             <div *ngIf="status !== 'Aprovada'">
                 <h1>Infelizmente algo deu errado ao adicionar a aventura!</h1>
             </div>
-            <button type="button" (click)="closeModal()">Tudo bem!</button>
+            <button type="button" (click)="closeModal()">Ok</button>
         </div>
     </div>
 </div>

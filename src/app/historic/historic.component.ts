@@ -20,6 +20,7 @@ export class HistoricComponent {
     constructor(private activatedRoute: ActivatedRoute, private location: Location) {
         this.id = this.activatedRoute.snapshot.params.id;
         this.getHistoric(this.activatedRoute.snapshot.params.id);
+        
     }
 
     getHistoric(id: number) {

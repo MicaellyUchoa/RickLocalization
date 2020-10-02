@@ -3,6 +3,8 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 import { Validators, FormGroup, FormControl } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
 import { DataHistoric } from "server/historic";
+import Dimension from "src/models/dimension";
+import { DataDimensions } from "server/dimensions";
 
 @Component({
     selector: "app-modal-create",
@@ -18,10 +20,12 @@ export class ModalCreateComponent {
     };
     status: string;
     isSubmitted = false;
+    dimensionsList: Dimension[];
     constructor(public dialogRef: MatDialogRef<ModalCreateComponent>, @Inject(MAT_DIALOG_DATA) public id: string) {
         if (id) {
             console.log(id);
             this.formValidations();
+            this.dimensionsList = DataDimensions;
         }
     }
 
@@ -35,6 +39,7 @@ export class ModalCreateComponent {
     sendHistoric() {
         DataHistoric.push({ ...this.tripForm.value, idPersonage: 3, id: DataHistoric.length });
         console.log(DataHistoric);
+        this.status = "Aprovada";
     }
 
     closeModal() {

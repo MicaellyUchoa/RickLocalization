@@ -78,7 +78,7 @@ label {
 }
 
 .modal>.display-status {
-  padding: 0px 20px;
+  padding: 20px;
 }
 
 .modal>.header>img {
@@ -102,6 +102,10 @@ select {
   margin-top: 0.3rem;
   outline: 0;
   padding: 0 0.8rem;
+  width: 100%;
+}
+
+.w-full {
   width: 100%;
 }
 
