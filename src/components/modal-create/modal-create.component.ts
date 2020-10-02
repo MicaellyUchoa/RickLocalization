@@ -5,7 +5,6 @@ import { HttpClient } from "@angular/common/http";
 import { DataHistoric } from "server/historic";
 import Dimension from "src/models/dimension";
 import { DataDimensions } from "server/dimensions";
-
 @Component({
     selector: "app-modal-create",
     templateUrl: "./modal-create.component.html",

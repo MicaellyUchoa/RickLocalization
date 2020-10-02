@@ -1,7 +1,7 @@
 <div class="modal-backdrop" id="modal-create">
     <div class="modal">
         <div class="header">
-            <!-- <img src="../../assets/images/icon/close.svg" (click)="closeModal()" /> -->
+            <img src="../../assets/icons/close.svg" (click)="closeModal()" />
         </div>
         <form class="content" *ngIf="!status" [formGroup]="tripForm" (ngSubmit)="sendHistoric()">
             <p class="title">Adicionar uma aventura</p>
