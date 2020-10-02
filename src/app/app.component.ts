@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
 import { DataDimensions } from "server/dimensions";
-import Dimensions from "src/models/dimensions";
+import Dimension from "src/models/dimension";
 import { DataPersonage } from "../../server/personage";
 import Personage from "../models/personage";
+
 @Component({
     selector: "app-root",
     templateUrl: "./app.component.html",
@@ -11,7 +12,7 @@ import Personage from "../models/personage";
 export class AppComponent {
     title = "RickLocalization";
     personageList: Personage[];
-    dimensionsList: Dimensions[];
+    dimensionsList: Dimension[];
     constructor() {
         this.personageList = DataPersonage;
         this.dimensionsList = DataDimensions;

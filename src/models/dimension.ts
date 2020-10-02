@@ -1,4 +1,4 @@
-export default interface Dimensions {
+export default interface Dimension {
     id: number;
     name: string;
     description: string;

@@ -1,6 +1,8 @@
+import Dimension from "./dimension";
+
 export default interface Historic {
     id: number;
     idPersonage: number;
-    dimensionTo: number;
-    dimensionFrom: number;
+    dimensionTo: Dimension;
+    dimensionFrom: Dimension;
 }

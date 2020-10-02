@@ -1,1 +1,39 @@
-<p>details works!</p>
+<div class="bg-detail">
+    <img src="../assets/icons/left.svg" (click)="goBack()" />
+    <div class="card-detail" *ngIf="dimension">
+        <div *ngIf="dimension">
+            <div class="personage-item">
+                <h2>Detalhes sobre o personagem:</h2>
+                <p>O código secreto é {{ personage.id }}, não espalha hein.</p>
+                <h3>Personagens</h3>
+                <div class="container-images">
+                    <div class="box-item mr-4">
+                        <img src="../assets/rick/{{ personage.rickImage }}" />
+                        <p class="mt-4">{{ personage.rickName }}</p>
+                    </div>
+                    <div class="box-item">
+                        <img src="../assets/morty/{{ personage.mortyImage }}" />
+                        <p class="mt-4">{{ personage.mortyName }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dimension-item">
+                <h2>Informações da dimensão:</h2>
+
+                <div class="flex">
+                    <div class="box-item">
+                        <img class="mb-4" *ngIf="dimension.image" src="../assets/dimensions/{{ dimension.image }}" />
+                        <p>
+                            O nome é <strong>{{ dimension.name }}</strong>
+                        </p>
+                        <p class="left mt-4 ml-4">{{ dimension.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <button type="button" (click)="openHistoric()">Histórico</button>
+            <button type="button">Adicionar aventura</button>
+        </footer>
+    </div>
+</div>

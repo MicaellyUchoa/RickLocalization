@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { DataDimensions } from "server/dimensions";
-import Dimensions from "src/models/dimensions";
+import Dimensions from "src/models/dimension";
 import { DataPersonage } from "../../../server/personage";
 import Personage from "../../models/personage";
 @Component({
@@ -20,6 +20,6 @@ export class HomeComponent {
     }
 
     openDetails(id: number) {
-        this.router.navigate(['/details']);
+        this.router.navigate(["/details", id]);
     }
 }

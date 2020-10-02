@@ -1,0 +1,22 @@
+<div class="bg-detail">
+    <img src="../assets/icons/left.svg" (click)="goBack()" />
+    <div class="card-detail">
+        <h2>Histórico</h2>
+        <div *ngIf="historic">
+            <div class="personage-item flex justify-content-between w-full" *ngFor="let item of historic">
+                <div>
+                    <img src="../assets/dimensions/{{ item.dimensionFrom.image }}" />
+                    <p>{{ item.dimensionFrom.name }}</p>
+                </div>
+                <div class="separator-green w-full"></div>
+                <div>
+                    <img src="../assets/dimensions/{{ item.dimensionTo.image }}" />
+                    <p>{{ item.dimensionTo.name }}</p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="historic.length === 0">
+            <p>Ainda não possui histórico </p>
+</div>
+    </div>
+</div>
