@@ -29,7 +29,6 @@ export class HistoricComponent {
                 historicTemp.push(item);
             }
         });
-        console.log(historicTemp);
         this.historic = historicTemp;
     }
 

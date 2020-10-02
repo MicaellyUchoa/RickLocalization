@@ -1,0 +1,56 @@
+<div class="modal-backdrop" id="modal-create">
+    <div class="modal">
+        <div class="header">
+            <!-- <img src="../../assets/images/icon/close.svg" (click)="closeModal()" /> -->
+        </div>
+        <form class="content" *ngIf="!status" [formGroup]="tripForm" (ngSubmit)="sendHistoric()">
+            <p class="title">Adicionar uma aventura</p>
+            <div>
+                <label>De:</label>
+                <select formControlName="from">
+                    <option selected value="">Selecione</option>
+                    <!-- <option *ngFor="let card of cards" [ngValue]="card">Cartão com final {{ card.final }}</option> -->
+                </select>
+
+                <div class="error-container" *ngFor="let validation of validationMessages.from">
+                    <div
+                        *ngIf="
+                            tripForm.get('from').hasError(validation.type) &&
+                            (tripForm.get('from').dirty || tripForm.get('from').touched)
+                        "
+                    >
+                        <span>{{ validation.message }}</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label>Para:</label>
+                <select formControlName="to">
+                    <option selected value="">Selecione</option>
+                    <!-- <option *ngFor="let card of cards" [ngValue]="card">Cartão com final {{ card.final }}</option> -->
+                </select>
+
+                <div class="error-container" *ngFor="let validation of validationMessages.to">
+                    <div
+                        *ngIf="
+                            tripForm.get('to').hasError(validation.type) &&
+                            (tripForm.get('to').dirty || tripForm.get('to').touched)
+                        "
+                    >
+                        <span>{{ validation.message }}</span>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" [disabled]="!tripForm.valid">Adicionar</button>
+        </form>
+        <div *ngIf="status" class="display-status">
+            <div *ngIf="status === 'Aprovada'">
+                <h1>Aventura adicionada com sucesso!</h1>
+            </div>
+            <div *ngIf="status !== 'Aprovada'">
+                <h1>Infelizmente algo deu errado ao adicionar a aventura!</h1>
+            </div>
+            <button type="button" (click)="closeModal()">Tudo bem!</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,146 @@
+.modal-backdrop {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.modal-backdrop.hidden {
+  display: none;
+}
+
+.modal-backdrop:after {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.content>img {
+  border: 3px solid #20bc5b;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+
+.modal {
+  background: #fff;
+  border-radius: 0px;
+  height: 100%;
+  margin: 100px 0px 0px 0px;
+  width: 100%;
+}
+
+.title {
+  color: #20bc5b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h1 {
+  color: #1D3D29;
+  font: 500 2rem Archivo;
+  text-align: center;
+}
+
+label {
+  color: #1D3D29;
+  float: left;
+  margin: 30px 0px 0px 0px;
+}
+
+.error-container>div>span {
+  color: #B54A09;
+  font-size: 1rem;
+  font-weight: 300;
+  float: left;
+  margin-top: 0.2rem;
+}
+
+.username {
+  color: #1D3D29;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.modal>.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal>.display-status {
+  padding: 0px 20px;
+}
+
+.modal>.header>img {
+  cursor: pointer;
+  padding: 10px;
+  width: 50px;
+}
+
+.modal>.content {
+  padding: 32px;
+  text-align: center;
+}
+
+
+select {
+  border-radius: 0.5rem;
+  border: 1px solid #F1F1F1;
+  background: #F1F1F1;
+  font: 1.2rem Archivo;
+  height: 3rem;
+  margin-top: 0.3rem;
+  outline: 0;
+  padding: 0 0.8rem;
+  width: 100%;
+}
+
+button {
+  align-items: center;
+  background: #20bc5b;
+  border: 0;
+  border-radius: 0.8rem;
+  color: #F1F1F1;
+  cursor: pointer;
+  display: flex;
+  font: 700 1.6rem Archivo;
+  height: 2.5rem;
+  justify-content: center;
+  margin-top: 3.2rem;
+  outline: 0;
+  text-decoration: none;
+  transition: background-color 0.2;
+  width: 100%;
+
+  &:hover {
+    background: #00823B;
+  }
+
+  &:disabled {
+    background: #43DE88;
+  }
+
+  .mat-dialog-container {
+    padding: 0px !important;
+  }
+
+}
+
+@media(min-width: 700px) {
+  .modal {
+    border-radius: 15px;
+    min-height: 300px;
+    height: auto;
+    width: 420px;
+  }
+}
